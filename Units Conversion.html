@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        table{
+            border:2px solid black;
+            padding:50px;
+            margin-top:15%;
+            margin-left:25%;
+            font-size: 30px;;
+            border-radius: 20px;
+            background-color: rgb(192, 252, 232);
+        }
+        input{
+            height:30px;
+            width:150px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label>UNITS In M</label></td>
+            <td><input id="ip" oninput="fun()" type="number"></td>
+        </tr>
+        <tr>
+            <th><label>CONVERSIONS</label></th>
+            <th><input id="ip2" type="text"></th>
+            <th><select id="select" onchange="fun()">
+                <option value="">Select</option>
+                <option value="M">M</option>
+                <option value="CM">CM</option>
+                <option value="MM">MM</option>
+                <option value="KM">KM</option>
+                <option value="FEET">FEET</option>
+            </select></th>
+        </tr>
+    </table>
+    <script>
+        function fun()
+{
+    var select=document.getElementById("select");
+    var ans=select.options[select.selectedIndex].text;
+    var input=document.getElementById("ip").value;
+    if(ans=="M")
+    {
+        document.getElementById("ip2").value=input;
+    }
+    else if(ans=="CM")
+    {
+        document.getElementById("ip2").value=input*100
+    }
+    else if(ans=="MM")
+    {
+        document.getElementById("ip2").value=input*1000;
+    }
+    else if(ans=="KM")
+    {
+        document.getElementById("ip2").value=input*0.001;
+    }
+    else if(ans=="FEET")
+    {
+        document.getElementById("ip2").value=input*3.281;
+    }
+    
+}
+    </script>
+</body>
+</html>

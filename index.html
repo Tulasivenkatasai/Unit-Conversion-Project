@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label>UNITS</label></td>
+            <td><input id="ip" oninput="fun()" type="number"></td>
+        </tr>
+        <tr>
+            <th><label>CONVERSIONS</label></th>
+            <th><input id="ip2" type="text"></th>
+            <th><select id="select" onchange="fun()">
+                <option value="">Select</option>
+                <option value="M">M</option>
+                <option value="CM">CM</option>
+                <option value="MM">MM</option>
+                <option value="KM">KM</option>
+                <option value="FEET">FEET</option>
+            </select></th>
+        </tr>
+    </table>
+</body>
+</html>
